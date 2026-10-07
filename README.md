@@ -4,6 +4,7 @@ Reverse engineering and re-flashing **SES-imagotag / VusionGroup "HRD3-0210-A" e
 20-packs on eBay still showing their factory barcode. This repo documents the board, how to unlock and flash it, every pin we have mapped, and several ways to draw on the display.
 
 > Status: **working**. Unlock, flash, draw images three different ways, run the LED (dimmed) and read the button. Not working yet: receiving images over the rail's signal contact.
+> Our tags came from [one eBay lot of 20](https://www.ebay.com/itm/267298489162); see [Revisions](docs/revisions.md#where-our-tags-came-from) for how mixed such lots are.
 > Work done on tags I own. Retail shelf labels in stores belong to the retailer; do not touch those. Tags from eBay may differ internally, see [Revisions](docs/revisions.md).
 
 ![coil / test-pad side, with named test points](docs/images/test-pad-side.png)

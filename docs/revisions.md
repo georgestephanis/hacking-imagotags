@@ -10,6 +10,15 @@ Lots sold as **SES-imagotag HRD3-0210-A** contain different electronics. Identif
 
 Do not assume the three share a debug interface or pad layout. The shared parts are the panel and the booster/FPC arrangement.
 
+## Where our tags came from
+
+All of our tags came from one eBay lot: ["SES-imagotag e-Ink Price Tags-HRD3-0210-A (Lot of 20)"](https://www.ebay.com/itm/267298489162), bought in early October 2026.
+George estimates that **about 80-90 % of the tags received were the listed HRD3-0210-A**; the rest were other models. The listing is the seller's, so it may be gone or have changed by the time you read this;
+other 20- and 100-packs of "HRD3-0210-A" are listed on eBay regularly.
+
+What we have **not** done is count which PCB each tag has. The label says HRD3-0210-A on all of them, but the electronics under it differ (see the table above: we found ContRD010A with an EFR32FG22 and ContRD010C with an ESWIN RISC-V part,
+and have seen a BLE battery board). Do not assume a lot is uniform: **open one tag and read the silicon before buying more of anything.** Counting the revisions in a lot would be a useful contribution.
+
 ## Why this matters for other people's write-ups
 
 - Third-party notes that attribute a **Qualcomm QCC710 / BLE ESL service** to "HRD3-0210-A" (see the further reading in the [README](../README.md#further-reading)) describe the BTRTx008A variant, not ContRD010A.
