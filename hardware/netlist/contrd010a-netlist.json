@@ -1,0 +1,1494 @@
+{
+ "boardName": "E-Ink Display",
+ "generated": "2026-10-06T17:17:21.212Z",
+ "unit": "mm",
+ "boardSize": {
+  "width": 62.2,
+  "height": 30.1
+ },
+ "nets": [
+  {
+   "label": "SPRING_SIG",
+   "padIds": [
+    "tp-sig-spring-1",
+    "tp-sig-spring-2",
+    "spring-sig",
+    "pad-front-213",
+    "pad-front-215",
+    "pad-front-217",
+    "pad-front-294"
+   ],
+   "viaIds": [
+    "via-90"
+   ]
+  },
+  {
+   "label": "NET2",
+   "padIds": [
+    "tp-back-2"
+   ],
+   "viaIds": [
+    "via-80"
+   ]
+  },
+  {
+   "label": "GPIO_PD01",
+   "padIds": [
+    "tp-pd01",
+    "mcu-39-pd01",
+    "pad-front-218",
+    "pad-front-219",
+    "pad-front-222"
+   ],
+   "viaIds": [
+    "via-27",
+    "via-30"
+   ]
+  },
+  {
+   "label": "LED_R_CATHODE",
+   "padIds": [
+    "tp-led-red-cathode",
+    "pad-front-173",
+    "led-pad-2"
+   ],
+   "viaIds": [
+    "via-55",
+    "via-62"
+   ]
+  },
+  {
+   "label": "NET5",
+   "padIds": [
+    "tp-back-5",
+    "pad-front-159",
+    "pad-back-291"
+   ],
+   "viaIds": [
+    "via-57",
+    "via-58"
+   ]
+  },
+  {
+   "label": "LED_G_CATHODE",
+   "padIds": [
+    "tp-led-green-cathode",
+    "pad-front-131",
+    "led-pad-1"
+   ],
+   "viaIds": [
+    "via-56",
+    "via-63"
+   ]
+  },
+  {
+   "label": "LED_B_CATHODE",
+   "padIds": [
+    "tp-led-blue-cathode",
+    "pad-front-175",
+    "pad-front-177",
+    "led-pad-3"
+   ],
+   "viaIds": [
+    "via-53",
+    "via-61"
+   ]
+  },
+  {
+   "label": "NET8",
+   "padIds": [
+    "tp-back-8",
+    "pad-front-140"
+   ],
+   "viaIds": [
+    "via-85"
+   ]
+  },
+  {
+   "label": "NET9",
+   "padIds": [
+    "tp-back-9",
+    "pad-front-144",
+    "pad-front-148",
+    "pad-front-154"
+   ],
+   "viaIds": [
+    "via-77",
+    "via-81"
+   ]
+  },
+  {
+   "label": "LED_G_GATE",
+   "padIds": [
+    "tp-led-g-gate-pb00",
+    "mcu-20-pb00",
+    "pad-front-130",
+    "pad-front-171"
+   ],
+   "viaIds": [
+    "via-52",
+    "via-74"
+   ]
+  },
+  {
+   "label": "NET11",
+   "padIds": [
+    "tp-back-11",
+    "pad-front-143",
+    "pad-front-155"
+   ],
+   "viaIds": [
+    "via-76"
+   ]
+  },
+  {
+   "label": "VIN_3V3",
+   "padIds": [
+    "tp-vin-3v3-1",
+    "tp-vin-3v3-2",
+    "pad-front-52",
+    "spring-vin-3v3",
+    "pad-front-138",
+    "pad-front-237",
+    "pad-front-239"
+   ],
+   "viaIds": [
+    "via-78",
+    "via-79",
+    "via-82",
+    "via-83",
+    "via-84"
+   ]
+  },
+  {
+   "label": "NET13",
+   "padIds": [
+    "tp-back-14"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "VDD",
+   "padIds": [
+    "tp-vdd-1",
+    "tp-pa00",
+    "tp-vdd-2",
+    "pad-front-53",
+    "pad-front-55",
+    "pad-front-57",
+    "mcu-15-pavdd",
+    "mcu-21-pa00",
+    "pad-front-145",
+    "pad-front-201",
+    "pad-front-202",
+    "pad-front-203",
+    "pad-front-221",
+    "pad-front-226",
+    "pad-front-241",
+    "pad-front-258",
+    "pad-front-259",
+    "pad-front-269",
+    "pad-front-311",
+    "pad-front-342",
+    "pad-front-348",
+    "pad-front-349"
+   ],
+   "viaIds": [
+    "via-24",
+    "via-31",
+    "via-38",
+    "via-39",
+    "via-42",
+    "via-46",
+    "via-47",
+    "via-48",
+    "via-65",
+    "via-69"
+   ]
+  },
+  {
+   "label": "GND",
+   "padIds": [
+    "tp-gnd-1",
+    "tp-gnd-2",
+    "pad-front-51",
+    "pad-front-54",
+    "pad-front-56",
+    "pad-front-58",
+    "pad-front-59",
+    "pad-front-61",
+    "pad-front-64",
+    "pad-front-65",
+    "pad-front-69",
+    "pad-front-71",
+    "pad-front-74",
+    "pad-front-76",
+    "pad-front-78",
+    "mcu-13-rfvss",
+    "spring-gnd",
+    "pad-front-135",
+    "pad-front-157",
+    "pad-front-161",
+    "pad-front-163",
+    "pad-front-167",
+    "pad-front-170",
+    "pad-front-172",
+    "pad-front-180",
+    "pad-front-182",
+    "pad-front-185",
+    "pad-front-220",
+    "pad-front-223",
+    "pad-front-227",
+    "pad-front-230",
+    "pad-front-238",
+    "pad-front-240",
+    "pad-front-246",
+    "pad-front-247",
+    "pad-front-261",
+    "pad-front-267",
+    "pad-front-270",
+    "pad-front-272",
+    "pad-front-274",
+    "pad-front-356"
+   ],
+   "viaIds": [
+    "via-40",
+    "via-44"
+   ]
+  },
+  {
+   "label": "DBG_SWO",
+   "padIds": [
+    "tp-swo-pa03",
+    "mcu-24-pa03",
+    "pad-front-162",
+    "pad-front-164",
+    "pad-front-166"
+   ],
+   "viaIds": [
+    "via-36",
+    "via-49"
+   ]
+  },
+  {
+   "label": "DBG_SWCLK",
+   "padIds": [
+    "tp-swclk-pa01",
+    "mcu-22-pa01"
+   ],
+   "viaIds": [
+    "via-35"
+   ]
+  },
+  {
+   "label": "DBG_SWDIO",
+   "padIds": [
+    "tp-swdio-pa02",
+    "mcu-23-pa02"
+   ],
+   "viaIds": [
+    "via-34"
+   ]
+  },
+  {
+   "label": "GPIO_PA06",
+   "padIds": [
+    "tp-pa06",
+    "mcu-27-pa06",
+    "pad-front-197"
+   ],
+   "viaIds": [
+    "via-66",
+    "via-68"
+   ]
+  },
+  {
+   "label": "GPIO_PA04",
+   "padIds": [
+    "tp-pa04",
+    "mcu-25-pa04",
+    "pad-front-199",
+    "pad-front-206"
+   ],
+   "viaIds": [
+    "via-91"
+   ]
+  },
+  {
+   "label": "DBG_NRESET",
+   "padIds": [
+    "tp-nreset",
+    "mcu-11-resetn"
+   ],
+   "viaIds": [
+    "via-41"
+   ]
+  },
+  {
+   "label": "BTN",
+   "padIds": [
+    "tp-btn-pb03",
+    "mcu-17-pb03",
+    "pad-front-273",
+    "pad-front-275"
+   ],
+   "viaIds": [
+    "via-6",
+    "via-37"
+   ]
+  },
+  {
+   "label": "GPIO_PC07",
+   "padIds": [
+    "tp-pc07",
+    "mcu-08-pc07",
+    "pad-front-308"
+   ],
+   "viaIds": [
+    "via-8",
+    "via-13",
+    "via-29",
+    "via-70"
+   ]
+  },
+  {
+   "label": "NET23",
+   "padIds": [
+    "tp-back-26",
+    "pad-front-354"
+   ],
+   "viaIds": [
+    "via-67"
+   ]
+  },
+  {
+   "label": "GPIO_PA05",
+   "padIds": [
+    "tp-pa05",
+    "mcu-26-pa05",
+    "pad-front-242",
+    "pad-front-282"
+   ],
+   "viaIds": [
+    "via-14",
+    "via-33"
+   ]
+  },
+  {
+   "label": "GPIO_PD02",
+   "padIds": [
+    "tp-pd02",
+    "mcu-38-pd02",
+    "pad-front-243"
+   ],
+   "viaIds": [
+    "via-23",
+    "via-26"
+   ]
+  },
+  {
+   "label": "GPIO_PD03",
+   "padIds": [
+    "tp-pd03",
+    "mcu-37-pd03",
+    "pad-front-256",
+    "pad-front-283"
+   ],
+   "viaIds": [
+    "via-18",
+    "via-25"
+   ]
+  },
+  {
+   "label": "NET27",
+   "padIds": [
+    "tp-back-30"
+   ],
+   "viaIds": [
+    "via-86"
+   ]
+  },
+  {
+   "label": "NET28",
+   "padIds": [
+    "tp-back-32",
+    "pad-front-195",
+    "pad-front-205",
+    "pad-front-207",
+    "pad-front-214",
+    "pad-front-225"
+   ],
+   "viaIds": [
+    "via-43"
+   ]
+  },
+  {
+   "label": "SIG_PB01",
+   "padIds": [
+    "tp-sig-pb01",
+    "mcu-19-pb01",
+    "pad-front-184"
+   ],
+   "viaIds": [
+    "via-45",
+    "via-71"
+   ]
+  },
+  {
+   "label": "NET30",
+   "padIds": [
+    "tp-back-34"
+   ],
+   "viaIds": [
+    "via-98"
+   ]
+  },
+  {
+   "label": "LED_EN",
+   "padIds": [
+    "tp-led-en-pd00",
+    "mcu-40-pd00",
+    "pad-front-156"
+   ],
+   "viaIds": [
+    "via-28",
+    "via-75"
+   ]
+  },
+  {
+   "label": "NET32",
+   "padIds": [
+    "tp-back-37",
+    "pad-front-245",
+    "pad-front-279"
+   ],
+   "viaIds": [
+    "via-21"
+   ]
+  },
+  {
+   "label": "GPIO_PC05",
+   "padIds": [
+    "tp-pc05",
+    "mcu-06-pc05",
+    "pad-front-244",
+    "pad-front-248",
+    "pad-front-255"
+   ],
+   "viaIds": [
+    "via-11",
+    "via-15",
+    "via-22"
+   ]
+  },
+  {
+   "label": "DISP_PWR_EN",
+   "padIds": [
+    "tp-disp-pwr-en-pc06",
+    "mcu-07-pc06",
+    "pad-front-260",
+    "pad-front-343"
+   ],
+   "viaIds": [
+    "via-1",
+    "via-7"
+   ]
+  },
+  {
+   "label": "DISP_BUSY",
+   "padIds": [
+    "tp-disp-busy-pa08",
+    "mcu-29-pa08",
+    "pad-front-332"
+   ],
+   "viaIds": [
+    "via-32",
+    "via-92"
+   ]
+  },
+  {
+   "label": "DISP_CS",
+   "padIds": [
+    "tp-disp-cs-pc02",
+    "mcu-03-pc02",
+    "pad-front-329"
+   ],
+   "viaIds": [
+    "via-12",
+    "via-96"
+   ]
+  },
+  {
+   "label": "DISP_SDA",
+   "padIds": [
+    "tp-disp-sda-pc00",
+    "mcu-01-pc00",
+    "pad-front-327"
+   ],
+   "viaIds": [
+    "via-16",
+    "via-97"
+   ]
+  },
+  {
+   "label": "DISP_RES",
+   "padIds": [
+    "tp-disp-res-pc04",
+    "mcu-05-pc04",
+    "pad-front-331"
+   ],
+   "viaIds": [
+    "via-9",
+    "via-95"
+   ]
+  },
+  {
+   "label": "DISP_VCC_SWITCHED",
+   "padIds": [
+    "tp-disp-vcc-switched",
+    "pad-front-60",
+    "pad-front-262",
+    "pad-front-316",
+    "pad-front-325",
+    "pad-front-344"
+   ],
+   "viaIds": [
+    "via-3",
+    "via-87"
+   ]
+  },
+  {
+   "label": "NET40",
+   "padIds": [
+    "tp-back-46",
+    "pad-front-73",
+    "pad-front-339"
+   ],
+   "viaIds": [
+    "via-64"
+   ]
+  },
+  {
+   "label": "DISP_DC",
+   "padIds": [
+    "tp-disp-dc-pc03",
+    "mcu-04-pc03",
+    "pad-front-330"
+   ],
+   "viaIds": [
+    "via-10",
+    "via-93"
+   ]
+  },
+  {
+   "label": "DISP_SCK",
+   "padIds": [
+    "tp-disp-sck-pc01",
+    "mcu-02-pc01",
+    "pad-front-328"
+   ],
+   "viaIds": [
+    "via-17",
+    "via-94"
+   ]
+  },
+  {
+   "label": "BOOST_RAIL_A",
+   "padIds": [
+    "tp-boost-rail-a",
+    "pad-front-63",
+    "pad-front-263",
+    "pad-front-320"
+   ],
+   "viaIds": [
+    "via-4",
+    "via-89"
+   ]
+  },
+  {
+   "label": "BOOST_RAIL_B",
+   "padIds": [
+    "tp-boost-rail-b",
+    "pad-front-66",
+    "pad-front-265",
+    "pad-front-318"
+   ],
+   "viaIds": [
+    "via-5",
+    "via-88"
+   ]
+  },
+  {
+   "label": "NET45",
+   "padIds": [
+    "pad-front-62",
+    "pad-front-336"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET46",
+   "padIds": [
+    "pad-front-67",
+    "pad-front-266"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET47",
+   "padIds": [
+    "pad-front-68",
+    "pad-front-264",
+    "pad-front-315"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET48",
+   "padIds": [
+    "pad-front-70",
+    "pad-front-321"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET49",
+   "padIds": [
+    "pad-front-72",
+    "pad-front-323"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET50",
+   "padIds": [
+    "pad-front-75",
+    "pad-front-317"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET51",
+   "padIds": [
+    "pad-front-77",
+    "pad-front-319"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "PIN30_DECOUPLE",
+   "padIds": [
+    "mcu-30-decouple",
+    "pad-front-228"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "PIN09_HFXTAL_I",
+   "padIds": [
+    "mcu-09-hfxtal_i"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "PIN10_HFXTAL_O",
+   "padIds": [
+    "mcu-10-hfxtal_o"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "PIN12_RFVDD",
+   "padIds": [
+    "mcu-12-rfvdd",
+    "pad-front-271"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "PIN14_RF2G4_IO",
+   "padIds": [
+    "mcu-14-rf2g4_io"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "PIN16_PB04",
+   "padIds": [
+    "mcu-16-pb04",
+    "pad-front-168",
+    "pad-front-176"
+   ],
+   "viaIds": [
+    "via-50",
+    "via-72"
+   ]
+  },
+  {
+   "label": "PIN18_PB02",
+   "padIds": [
+    "mcu-18-pb02",
+    "pad-front-134",
+    "pad-front-169"
+   ],
+   "viaIds": [
+    "via-51",
+    "via-73"
+   ]
+  },
+  {
+   "label": "PIN36_IOVDD",
+   "padIds": [
+    "mcu-36-iovdd",
+    "pad-front-236"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "PIN35_AVDD",
+   "padIds": [
+    "mcu-35-avdd",
+    "pad-front-234"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "PIN34_DVDD",
+   "padIds": [
+    "mcu-34-dvdd",
+    "pad-front-232"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "PIN33_VREGVSS",
+   "padIds": [
+    "mcu-33-vregvss"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "PIN32_VREGVDD",
+   "padIds": [
+    "mcu-32-vregvdd",
+    "pad-front-229"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "PIN31_VREGSW",
+   "padIds": [
+    "mcu-31-vregsw"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "PIN28_PA07",
+   "padIds": [
+    "mcu-28-pa07",
+    "pad-front-224"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET66",
+   "padIds": [
+    "pad-front-119"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET67",
+   "padIds": [
+    "pad-front-120"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET68",
+   "padIds": [
+    "pad-back-126"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET69",
+   "padIds": [
+    "pad-front-127",
+    "led-pad-4",
+    "led-pad-5",
+    "led-pad-6",
+    "pad-back-292"
+   ],
+   "viaIds": [
+    "via-59",
+    "via-60"
+   ]
+  },
+  {
+   "label": "NET70",
+   "padIds": [
+    "pad-front-128"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET71",
+   "padIds": [
+    "pad-front-129"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET72",
+   "padIds": [
+    "pad-front-132"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET73",
+   "padIds": [
+    "pad-front-133"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET74",
+   "padIds": [
+    "pad-front-136"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET75",
+   "padIds": [
+    "pad-front-137"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET76",
+   "padIds": [
+    "pad-front-139"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET77",
+   "padIds": [
+    "pad-front-141"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET78",
+   "padIds": [
+    "pad-front-142"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET79",
+   "padIds": [
+    "pad-front-146"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET80",
+   "padIds": [
+    "pad-front-147",
+    "pad-front-149"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET81",
+   "padIds": [
+    "pad-front-150",
+    "pad-front-151"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET82",
+   "padIds": [
+    "pad-front-152"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET83",
+   "padIds": [
+    "pad-front-153"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET84",
+   "padIds": [
+    "pad-front-158"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET85",
+   "padIds": [
+    "pad-front-160"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET86",
+   "padIds": [
+    "pad-front-165"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET87",
+   "padIds": [
+    "pad-front-174"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET88",
+   "padIds": [
+    "pad-front-178"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET89",
+   "padIds": [
+    "pad-front-179"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET90",
+   "padIds": [
+    "pad-front-181"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET91",
+   "padIds": [
+    "pad-front-183"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET92",
+   "padIds": [
+    "pad-front-186"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET93",
+   "padIds": [
+    "pad-front-187"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET94",
+   "padIds": [
+    "pad-front-188"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET95",
+   "padIds": [
+    "pad-front-189"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET96",
+   "padIds": [
+    "pad-front-190"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET97",
+   "padIds": [
+    "pad-front-191",
+    "pad-front-351"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET98",
+   "padIds": [
+    "pad-front-192"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET99",
+   "padIds": [
+    "pad-front-193"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET100",
+   "padIds": [
+    "pad-front-194"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET101",
+   "padIds": [
+    "pad-front-196",
+    "pad-front-350"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET102",
+   "padIds": [
+    "pad-front-198",
+    "pad-front-347"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET103",
+   "padIds": [
+    "pad-front-200",
+    "pad-front-345"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET104",
+   "padIds": [
+    "pad-front-204"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET105",
+   "padIds": [
+    "pad-front-208",
+    "pad-front-355"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET106",
+   "padIds": [
+    "pad-front-209"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET107",
+   "padIds": [
+    "pad-front-210"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET108",
+   "padIds": [
+    "pad-front-211"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET109",
+   "padIds": [
+    "pad-front-212"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET110",
+   "padIds": [
+    "pad-front-216"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET111",
+   "padIds": [
+    "pad-front-231"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET112",
+   "padIds": [
+    "pad-front-233"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET113",
+   "padIds": [
+    "pad-front-235"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET114",
+   "padIds": [
+    "pad-front-249",
+    "pad-front-250",
+    "pad-front-251",
+    "pad-front-252",
+    "pad-front-253",
+    "pad-front-254",
+    "pad-front-277",
+    "pad-front-278"
+   ],
+   "viaIds": [
+    "via-19",
+    "via-20"
+   ]
+  },
+  {
+   "label": "NET115",
+   "padIds": [
+    "pad-front-257",
+    "pad-front-341"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET116",
+   "padIds": [
+    "pad-front-268"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET117",
+   "padIds": [
+    "pad-front-276"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET118",
+   "padIds": [
+    "pad-front-280"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET119",
+   "padIds": [
+    "pad-front-281"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET120",
+   "padIds": [
+    "pad-front-284"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET121",
+   "padIds": [
+    "pad-front-293"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET122",
+   "padIds": [
+    "pad-front-295"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET123",
+   "padIds": [
+    "pad-front-296"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET124",
+   "padIds": [
+    "pad-front-297"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET125",
+   "padIds": [
+    "pad-front-298"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET126",
+   "padIds": [
+    "pad-front-299"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET127",
+   "padIds": [
+    "pad-front-300"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET128",
+   "padIds": [
+    "pad-front-301"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET129",
+   "padIds": [
+    "pad-front-302"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET130",
+   "padIds": [
+    "pad-front-303"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET131",
+   "padIds": [
+    "pad-front-304"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET132",
+   "padIds": [
+    "pad-front-305"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET133",
+   "padIds": [
+    "pad-front-306"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET134",
+   "padIds": [
+    "pad-front-307"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET135",
+   "padIds": [
+    "pad-front-309"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET136",
+   "padIds": [
+    "pad-front-310"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET137",
+   "padIds": [
+    "pad-front-312"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET138",
+   "padIds": [
+    "pad-front-313",
+    "pad-front-352"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET139",
+   "padIds": [
+    "pad-front-314"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET140",
+   "padIds": [
+    "pad-front-322"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET141",
+   "padIds": [
+    "pad-front-324"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET142",
+   "padIds": [
+    "pad-front-326"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET143",
+   "padIds": [
+    "pad-front-333"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET144",
+   "padIds": [
+    "pad-front-334"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET145",
+   "padIds": [
+    "pad-front-335"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET146",
+   "padIds": [
+    "pad-front-337"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET147",
+   "padIds": [
+    "pad-front-338"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET148",
+   "padIds": [
+    "pad-front-340"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET149",
+   "padIds": [
+    "pad-front-346"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET150",
+   "padIds": [
+    "pad-front-353"
+   ],
+   "viaIds": []
+  },
+  {
+   "label": "NET151",
+   "padIds": [],
+   "viaIds": [
+    "via-54"
+   ]
+  }
+ ],
+ "components": [
+  {
+   "id": "fp-nfc-ic",
+   "side": "front",
+   "label": "",
+   "refDes": "ANT?",
+   "componentType": "connector",
+   "value": "",
+   "notes": "Unpopulated",
+   "padIds": [
+    "pad-front-278",
+    "pad-front-279",
+    "pad-front-280",
+    "pad-front-281",
+    "pad-front-282",
+    "pad-front-283",
+    "pad-front-284",
+    "pad-front-277"
+   ],
+   "viaIds": [],
+   "roles": {}
+  },
+  {
+   "id": "l-boost",
+   "side": "front",
+   "label": "",
+   "refDes": "",
+   "componentType": "other",
+   "value": "",
+   "notes": "Boost Inductor",
+   "padIds": [
+    "pad-front-315",
+    "pad-front-316"
+   ],
+   "viaIds": [],
+   "roles": {}
+  },
+  {
+   "id": "u-panel-load-switch",
+   "side": "front",
+   "label": "",
+   "refDes": "",
+   "componentType": "other",
+   "value": "",
+   "notes": "",
+   "padIds": [
+    "pad-front-341",
+    "pad-front-342",
+    "pad-front-343",
+    "pad-front-344"
+   ],
+   "viaIds": [],
+   "roles": {}
+  },
+  {
+   "id": "fp-unknown-4pad",
+   "side": "front",
+   "label": "",
+   "refDes": "",
+   "componentType": "other",
+   "value": "",
+   "notes": "",
+   "padIds": [
+    "pad-front-354",
+    "pad-front-356",
+    "pad-front-355",
+    "pad-front-353"
+   ],
+   "viaIds": [],
+   "roles": {}
+  }
+ ]
+}
