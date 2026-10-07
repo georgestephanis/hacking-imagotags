@@ -109,3 +109,20 @@ That covers the code, firmware, documentation, photos and netlists: if you build
 
 The exception is [`pyocd-target/`](pyocd-target/), which is **Apache-2.0** ([`LICENSES/Apache-2.0.txt`](LICENSES/Apache-2.0.txt)) so it can be contributed upstream to pyOCD. Every source file carries an SPDX header saying which applies.
 Apache-2.0 is compatible with GPLv3, which the "or later" clause lets you choose.
+
+## AI disclosure
+
+This project was done by George Stephanis **together with Claude Sonnet 5.5** (`claude-sonnet-5-5`, Anthropic), working in Claude Code, over **three calendar days (5-7 October 2026)**.
+It was one long, continuing conversation, not a one-shot generation.
+
+**Who did what.** George sourced the tags, soldered, probed with a multimeter, photographed the boards, traced the PCB pad by pad in
+[circuit-tracer](https://github.com/georgestephanis/circuit-tracer), and did every physical step (wiring the probe, BOOTSEL, power-cycling, watching the LED and display and reporting what happened).
+Claude researched, wrote the scripts, firmware and docs, ran the SWD and pyOCD tooling against the real tags, analysed the traced netlist, designed the experiments, renamed the pads, produced the annotated photos and assembled this repository.
+
+**Time.** About **17 hours of wall-clock time** between the first and last activity of each day (roughly 9.5 h on 5 Oct, 6 h on 6 Oct, 1.7 h on 7 Oct), of which I estimate **around 10 hours of active hands-on work**.
+Those figures come from the session timestamps and commit history, not a stopwatch. They undercount the human side: soldering, probing and tracing the board happen off-screen.
+Two tags were used (the first was unlocked and flashed as a sacrificial unit; the second repeated the procedure and added the dimmed LED, the 248-column fix and the direct Pico drive).
+
+**How far to trust it.** Anything described as working was run on real hardware. Inferences are marked *(unverified)*. The raw [research log](docs/research-log.md) keeps the wrong turns (for example the QFN32 pin-map assumption, the CS/DC swap, the inverted LED polarity),
+which is why it is long. An AI can be confidently wrong, so check anything that could harm hardware (voltages, which pad is which) against your own board before powering it.
+Corrections are welcome.
