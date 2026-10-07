@@ -1,6 +1,14 @@
 # pyOCD support for the Silicon Labs EFR32FG22 (flash algorithm + target)
 
-pyOCD has no built-in support for the EFR32FG22 (Series 2, Cortex-M33). This directory adds it:
+> **You probably do not need this.** Stock pyOCD (0.45.1 tested) flashes the EFR32FG22 with Silicon Labs' **official CMSIS pack** passed by hand:
+> `pyocd flash --pack SiliconLabs.GeckoPlatform_EFR32FG22_DFP.<version>.pack -t efr32fg22c121f512gm40 ...`. That route is faster (~43 kB/s against ~27 kB/s here) and has mass erase,
+> which this target lacks. What fails is *discovering* the pack: `pyocd pack find/install` returns nothing for the Silicon Labs Series 2 devices and silabs.com returns HTTP 403 to scripts, so the pack must be
+> downloaded in a browser. We reported that upstream as **[pyocd/pyOCD#2042](https://github.com/pyocd/pyOCD/issues/2042)** (text in [`../docs/pyocd-issue-draft.md`](../docs/pyocd-issue-draft.md)), and
+> because the official route works we are **not** proposing this target for upstream. See "pyOCD and the Silicon Labs pack" in [`../docs/flashing.md`](../docs/flashing.md).
+>
+> This directory is an independent, self-contained alternative we wrote **before** we found the pack worked: our own flash algorithm and a builtin-style target, usable with no pack at all.
+
+pyOCD itself ships no built-in target for the EFR32FG22 (Series 2, Cortex-M33); the pack is how it learns about the part. This directory supplies one without the pack:
 
 | File | What it is |
 |---|---|
@@ -23,7 +31,7 @@ python pyocd-target/pyocd_fg22.py cmd   -t efr32fg22c121f512gm40 -O connect_mode
 
 (`pyocd_fg22.py` accepts every normal pyOCD subcommand and option.)
 
-## Contributing it upstream
+## Contributing it upstream (not currently planned)
 
 1. Copy `target_EFR32FG22C121F512GM40.py` to `pyocd/target/builtin/`.
 2. In `pyocd/target/builtin/__init__.py` add:

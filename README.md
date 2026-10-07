@@ -57,7 +57,7 @@ Full reference: [docs/hardware.md](docs/hardware.md), [docs/pinout.md](docs/pino
 ```
 AGENTS.md          read this first if you are an AI agent (or want the short version of the rules)
 docs/              hardware.md, pinout.md, display.md, flashing.md, control.md, revisions.md,
-                   debug-unlock.md, epaper-breakout-plan.md, eswin-emu32vl170-research.md, research-log.md, images/
+                   debug-unlock.md, epaper-breakout-plan.md, eswin-emu32vl170-research.md, pyocd-issue-draft.md (pyOCD#2042), research-log.md, images/
 hardware/          photos/ (raw), netlist/ (traced SVG with named pads, netlist JSON, old->new id map)
 firmware/          eink_receiver (draws frames received on PB01), led_demo, led_brightness  (source + .bin)
 scripts/           SWD tooling (dci.py, eink_draw.py, pins.py, ...), Pico driver (pico_eink.py), frame builder (make_frame.py), build_fw.py

@@ -75,9 +75,26 @@ The shipped `receiver.bin` blinks the LED dimly green at boot. To build your own
 - A debug-lock erase only takes effect after a **power cycle**.
 - pyOCD queues register writes: a script that ends on a write may not flush it. Read back or close the session.
 - A short debugger session halts the core and lowers its current draw, so voltages measured while halted are higher than when firmware runs.
-- The pyOCD pack index lists the Silicon Labs pack but `pack install` finds nothing; use `--pack` with the manually downloaded file. Reported upstream: <https://github.com/pyocd/pyOCD/issues/2042>.
+- The pyOCD pack index lists the Silicon Labs pack but `pack install` finds nothing; use `--pack` with the manually downloaded file. Reported upstream: <https://github.com/pyocd/pyOCD/issues/2042>; details in the next section.
 - Do **not** run the DCI "enable debug lock" command (`0x430C0000`); `dci.py` has no mode for it on purpose.
 - Revision **ContRD010C** has a different MCU (ESWIN EMU32VL170, RISC-V); none of this applies. See [revisions.md](revisions.md).
+
+## pyOCD and the Silicon Labs pack
+
+What we found (pyOCD 0.45.1, macOS, a Pico running debugprobe as the CMSIS-DAP probe):
+
+- pyOCD's index **lists** `GeckoPlatform_EFR32FG22_DFP` (and the other Series 2 families), yet after `pyocd pack update` **none of the 86 non-deprecated Silicon Labs descriptors were in its cache**
+  (1674 of 1823 descriptors overall were present). `pyocd pack find EFR32FG22` and `pack install` report no matching devices, while `pack find EFM32` does find 42 older Silicon Labs parts.
+- Scripted requests to silabs.com for the pack return **HTTP 403** (curl, a browser user agent, with a Referer). Downloading the `.pack` **in a browser** works (10.9 MB, `SiliconLabs.GeckoPlatform_EFR32FG22_DFP.2025.12.1.pack`).
+- With the pack passed by hand, **stock pyOCD works well**: flashing 20000 random bytes erased 3 sectors and programmed 24576 bytes at **42.8 kB/s**, a read-back matched byte for byte, and `pyocd erase -s` worked.
+  The pack contains a Keil-style `GECKOS2.FLM` flash algorithm and **no debug sequences**.
+- Harmless warnings: every connect prints `Error probing AP#3: SWD/JTAG communication failure (WAIT ACK)` (hide it with `-O adi.v5.max_invalid_ap_count=0`, the workaround from
+  [pyOCD#1847](https://github.com/pyocd/pyOCD/issues/1847)); with firmware running, `connect_mode=halt` prints "Timed out waiting for core to halt after reset" but flashing still succeeds (`-O connect_mode=attach` avoids the reset).
+- A **debug-locked** part makes pyOCD say "No cores were discovered" because the pack has no sequence to unlock it; that needs the DCI erase in step 3.
+
+We reported the discovery problem as **[pyocd/pyOCD#2042](https://github.com/pyocd/pyOCD/issues/2042)** (opened 2026-10-05 from George's account, with an AI-assistance disclosure; the full text is in
+[pyocd-issue-draft.md](pyocd-issue-draft.md)). As of 2026-10-07 it is open with no replies. We did not send a pull request: because the official pack works, the in-repo target
+([`../pyocd-target/`](../pyocd-target/README.md), our own flash algorithm, ~27 kB/s, no mass erase) is only an independent alternative for people who cannot get the pack.
 
 ## Going back to the factory state
 

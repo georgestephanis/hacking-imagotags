@@ -1,3 +1,6 @@
+> **Status:** this is the text posted as [pyocd/pyOCD#2042](https://github.com/pyocd/pyOCD/issues/2042) on 2026-10-05 (from George Stephanis's account, with an attribution line added at the bottom). As of 2026-10-07 the issue is open with no comments.
+> Context and the full findings are in [flashing.md](flashing.md#pyocd-and-the-silicon-labs-pack).
+
 **Title:** Silicon Labs Series 2 packs (e.g. EFR32FG22) are listed in the index but `pyocd pack find/install` shows no such devices; works when the .pack is obtained by hand
 
 ### Disclosure: AI-assisted
