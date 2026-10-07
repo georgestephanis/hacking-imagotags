@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-2.0-or-later
 """Host-driven (bit-banged over SWD) UC8151/UC8159-style e-paper test: init, draw a stripe pattern, refresh.
 
 usage: eink_uc81.py [--cs 2] [--dc 3] [--power 6|none] [--power-level 0|1] [--stripe PX] [--w 212] [--h 104] [--pattern frame|stripes|white|black] [--id N] [--red]

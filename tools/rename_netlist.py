@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-2.0-or-later
 """Rename the auto-numbered pad / net / component IDs of the ContRD010A circuit-tracer export to names that say what they are.
 
 usage: rename_netlist.py IN.svg OUT.svg [OUT-netlist.json] [id-map.json]

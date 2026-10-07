@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
 """Pulse nRESET via the probe. Note: the nRESET pad (tp-back-23) is user-asserted, not verified;
 a full power-cycle is the reliable way to apply an erase/unlock."""
 import time

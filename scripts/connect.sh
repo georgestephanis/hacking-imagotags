@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# SPDX-License-Identifier: GPL-2.0-or-later
 # Open a pyOCD commander session on the (unlocked) tag. 20 kHz is the only reliably stable clock so far.
 # Retries because the first SWD handshake is flaky. Extra args are passed through, e.g.
 #   scripts/connect.sh -c "read32 0x00000000 32"

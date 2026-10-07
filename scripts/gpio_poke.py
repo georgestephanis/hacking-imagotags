@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
 """Drive PB00/PB02/PB04 (MCU pins 20/18/16) from the debugger to find the RGB LED channels.
 
 usage: gpio_poke.py init            enable GPIO clock, set PB0/PB2/PB4 push-pull, all driven LOW

@@ -1,3 +1,4 @@
+/* SPDX-License-Identifier: GPL-2.0-or-later */
 /* Minimal bare-metal demo for the SES-imagotag HRD3-0210-A (EFR32FG22C121F512GM40).
  *
  * Cycles the RGB LED through red -> green -> blue -> off each time the push button (PB03, active-low) is pressed.

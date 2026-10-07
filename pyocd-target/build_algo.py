@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: Apache-2.0
 """Compile fg22_algo.c and generate target_EFR32FG22C121F512GM40.py (a pyOCD builtin-style target with the flash algorithm).
 
 usage: build_algo.py            (needs Homebrew LLVM: brew install llvm; override with LLVM_BIN)

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-2.0-or-later
 """Flash a raw binary into the EFR32FG22's main flash by driving the MSC registers over SWD (no flash algorithm needed).
 
 usage: flash_msc.py IMAGE.bin [--addr 0x0] [--no-reset] [--clock HZ]

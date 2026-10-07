@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
 """Series 2 (EFR32FG22) debug-lock status / device erase over the DCI access port, via a pyOCD CMSIS-DAP probe.
 
 usage: dci.py status|erase [swd_clock_hz]     (default 20000)

@@ -102,4 +102,10 @@ Nothing below documents the ContRD010A directly; these are the closest write-ups
 Corrections and new findings welcome, especially: the rail protocol, other `ContRD` / `HRD3` revisions, the ContRD010C (ESWIN) debug story, radio firmware for the FG22, and a hardware-PWM LED dimmer.
 Keep claims honest: mark inferences as *unverified* and add what you measured to [docs/research-log.md](docs/research-log.md).
 
-MIT licensed (see `LICENSE`); the pyOCD target in `pyocd-target/` follows pyOCD's own licensing if contributed upstream.
+## License
+
+Copyright (C) 2026 George Stephanis. Licensed under the **GNU General Public License, version 2 or (at your option) any later version** (`GPL-2.0-or-later`, see [`LICENSE`](LICENSE)).
+That covers the code, firmware, documentation, photos and netlists: if you build on this, share your changes under the same terms.
+
+The exception is [`pyocd-target/`](pyocd-target/), which is **Apache-2.0** ([`LICENSES/Apache-2.0.txt`](LICENSES/Apache-2.0.txt)) so it can be contributed upstream to pyOCD. Every source file carries an SPDX header saying which applies.
+Apache-2.0 is compatible with GPLv3, which the "or later" clause lets you choose.

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
 """Probe the six MCU pins that reach the e-ink panel: PC00-PC04 (MCU pins 1-5) and PA08 (pin 29).
 
 usage: disp_probe.py spiscan [CMD]  try all 24 CS/DC/SCK/SDA assignments on PC00-PC03 (RES=PC04, BUSY=PA08) and send CMD (default 0x04)

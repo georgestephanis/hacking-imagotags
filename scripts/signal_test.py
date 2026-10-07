@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-2.0-or-later
 """Check the signal path from a serial TX (e.g. the Pico debugprobe's GP4) to the tag's PB01, through the debugger.
 
 usage: signal_test.py PORT [--baud 300] [--bytes 40]

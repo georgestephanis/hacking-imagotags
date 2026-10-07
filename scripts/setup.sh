@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# SPDX-License-Identifier: GPL-2.0-or-later
 # Create a local venv with everything the scripts need: pyOCD (debug/flash), Pillow (image conversion), pyserial (send_image.py).
 # Run from anywhere: scripts/setup.sh.  Firmware builds additionally need Homebrew LLVM: brew install llvm
 set -euo pipefail

@@ -1,3 +1,4 @@
+/* SPDX-License-Identifier: GPL-2.0-or-later */
 /* LED brightness test for the SES-imagotag HRD3-0210-A (ContRD010A, EFR32FG22).
  *
  * The RGB LED is common-anode behind a supply switch: PD00 high = LED supply on, PB02/PB00/PB04 = R/G/B (active high).

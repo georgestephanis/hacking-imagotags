@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-2.0-or-later
 """Build the 8000-byte frame (4000 black/white plane + 4000 red plane) that scripts/pico_eink.py draws.
 
 usage: make_frame.py [IMAGE | --demo-pico] OUT.bin [--crop x0,y0,x1,y1] [--dither] [--preview out.png]

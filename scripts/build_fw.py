@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-2.0-or-later
 """Build a tiny position-independent bare-metal image for the EFR32FG22 without a linker.
 
 usage: build_fw.py firmware/<name>/<file>.c [out.bin]

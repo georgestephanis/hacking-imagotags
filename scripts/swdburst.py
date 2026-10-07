@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
 """Fast repeated writes to ONE target address over SWD (for bit-banging a GPIO port from the host).
 
 pyOCD's write_memory_block32 auto-increments the address; here the MEM-AP address auto-increment is switched off so a whole list of

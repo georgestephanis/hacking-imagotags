@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-2.0-or-later
 """Watch every free GPIO as an input and report which pins change while you wiggle something (e.g. the signal spring contact pad-front-123).
 
 usage: gpio_watch.py [SECONDS] [--pull up|down|none]

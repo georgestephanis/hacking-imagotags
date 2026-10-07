@@ -1,3 +1,4 @@
+/* SPDX-License-Identifier: GPL-2.0-or-later */
 /* Image receiver for the SES-imagotag HRD3-0210-A (EFR32FG22C121F512GM40, 250x128 black/white/red e-paper).
  *
  * The tag listens on its rail signal contact (PB01) for a serial frame, checks it, and shows it on the e-paper.

@@ -1,3 +1,4 @@
+/* SPDX-License-Identifier: Apache-2.0 */
 /* On-target flash algorithm for the Silicon Labs EFR32FG22 (Series 2 'xG22', Cortex-M33), for pyOCD.
  *
  * pyOCD loads this into RAM, sets r0..r3 to the arguments, runs the entry point and checks r0 (0 = success).

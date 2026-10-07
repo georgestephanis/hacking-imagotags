@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-2.0-or-later
 """Find what makes the panel's power-on command (UC81xx 0x04) complete: scan candidate power-enable pins/levels and power-register settings.
 
 For every combination: reset the panel, send PWR (0x01) then PON (0x04), wait up to 3 s for BUSY (PA08, active low) to return high.

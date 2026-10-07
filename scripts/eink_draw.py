@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-2.0-or-later
 """Show an image (or a built-in demo) on the SES-imagotag HRD3-0210-A's 250x128 black/white/red e-paper panel.
 
 usage: eink_draw.py [IMAGE | --demo] [--crop x0,y0,x1,y1] [--dither] [--led] [--no-refresh] [--preview out.png]

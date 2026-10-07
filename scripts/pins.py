@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
 """usage: pins.py SECONDS PB02=1 PD00=1 ...  Drive the listed pins (push-pull) to the given levels, hold, then release them (disabled).
 
 RGB LED (confirmed 2026-10-05): PD00 high = LED anode supply enabled; PB02 high = red, PB00 high = green, PB04 high = blue.

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
 """Hold the RGB LED pins in a given state by reconnecting and rewriting continuously.
 
 The chip browns out ~0.1 s after every debugger connection (see docs/research-log.md), so a single write is wiped almost at once.

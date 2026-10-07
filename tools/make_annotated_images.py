@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-2.0-or-later
 """Draw the named pads / pins onto the board photos embedded in the traced SVG (hardware/netlist/contrd010a.svg).
 
 usage: make_annotated_images.py [SVG] [OUT_DIR]      -> test-pad-side.png, mcu-side.png, mcu-pinout.png

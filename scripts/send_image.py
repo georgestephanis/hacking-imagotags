@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-2.0-or-later
 """Send an image to a tag running firmware/eink_receiver over its signal contact (PB01), from any 3.3 V serial TX.
 
 usage: send_image.py PORT [IMAGE | --demo] [--baud 38400] [--crop x0,y0,x1,y1] [--dither] [--preview out.png]

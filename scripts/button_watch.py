@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
 """Watch PB03 (MCU pin 17) as an input with pull-up and log transitions, to test the 'button to ground' hypothesis.
 usage: button_watch.py [SECONDS]   (default 40)
 Registers: PB MODEL +0x34 (MODE3 = bits 15:12, INPUTPULL = 2), DOUT bit 3 = 1 selects pull-up, DIN +0x44."""

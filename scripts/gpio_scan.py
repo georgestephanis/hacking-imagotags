@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
 """Scan GPIOs one at a time (high 3 s, low/off 1 s) to find what lights the RGB LED.
 
 usage: gpio_scan.py high|low

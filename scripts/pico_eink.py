@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
 # MicroPython for the Pico: draw a frame on the tag's e-paper by driving the panel's SPI lines directly
 # through the display test points (bypassing the tag's MCU). Same init/refresh sequence as scripts/eink_draw.py.
 #

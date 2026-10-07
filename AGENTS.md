@@ -76,4 +76,5 @@ the 2.4 GHz antenna path and radio firmware; the ContRD010C (ESWIN) unlock and d
 - Put each new finding in [docs/research-log.md](docs/research-log.md) with the date, what was measured and how, and mark inferences *(unverified)*.
 - Promote settled facts into [docs/hardware.md](docs/hardware.md), [docs/pinout.md](docs/pinout.md) or [docs/display.md](docs/display.md), and correct anything they replace.
 - If you re-trace the board in [circuit-tracer](https://github.com/georgestephanis/circuit-tracer), note that `tools/rename_netlist.py` maps the **original auto-numbered IDs** of the current export (`tp-back-18` and so on): a fresh trace has new auto IDs, so update its mapping tables first. Then run `tools/make_annotated_images.py` to refresh the annotated photos.
+- New source files get an `SPDX-License-Identifier: GPL-2.0-or-later` header (the Apache-2.0 exception is `pyocd-target/` only, which is meant to go upstream to pyOCD).
 - Do not commit third-party artwork you draw on the panel, and do not commit vendor firmware dumps.
