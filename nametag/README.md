@@ -1,7 +1,8 @@
 # nametag: a standalone name badge on the ContRD010A tag
 
-Turns a tag into a wearable name badge that runs from a 3.3 V supply with no host: **page 1** shows a name, email and phone number; **a press of the button** (the one on the back, PB03) switches to
-**page 2**, a smaller name beside a **QR code** for a URL. More pages can be added; each press moves to the next and wraps round.
+Turns a tag into a wearable name badge that runs from a 3.3 V supply with no host: **page 1** shows a name, email and phone number; **each press of the button** (the one on the back, PB03) moves to the next page,
+and the last wraps round to the first. The other pages are **QR-code pages**: a smaller name, a red arrow pointing at the code, and a caption under the arrow (a website's domain, or "Venmo" / "Cash App" with the handle).
+Pages are defined in a config file, so adding one is a line of JSON.
 
 > Status: the page generator and the layouts are done and checked (the QR decodes). **The firmware is not written yet**; it waits for the layouts to be approved.
 > Your details live in a local config that is kept out of git (see below).
@@ -15,9 +16,10 @@ python3 nametag/make_pages.py nametag/mine.local.json        # needs: pip instal
 
 Output (in `./nametag-out/`): `page1.png`, `page2.png` (4x previews of exactly what the panel will draw, red header and rule = red ink) and `pages.bin` (the flash image).
 
-- Config keys: `name`, `email`, `phone`, `url`.
-- The QR code is version 2 (25 × 25 modules) at **error-correction level Q** (25 % recovery) for a 20-character URL, drawn at 4 px per module = 100 px (about 19 mm at the panel's 0.1875 mm pixels).
-  Longer URLs need a bigger version and smaller modules; keep URLs short. The generator picks the largest whole-pixel module size that fits.
+- Config keys: `name`, `email`, `phone`, and `pages`, a list of `{"type": "contact"}` or `{"type": "qr", "url": ..., "caption": [...]}` (see `nametag.example.json`). Without `pages` you get a contact page and one QR page for a `url`.
+- For each URL the generator tries error-correction levels Q, M and L and keeps the combination with the **largest whole-pixel module size** (ties go to the stronger level), because a bigger module scans more reliably than extra error correction on a clean e-paper.
+  For example a 20-character URL is version 2 at level Q (25 × 25 modules, 100 px); a 44-character Venmo URL is version 3 at level L (29 × 29 modules, 116 px); a Cash App URL is version 3 at level M. At 4 px per module a code is about 19-22 mm wide on the panel.
+  Keep URLs short: each extra step in size shrinks the module or the code. The generator checks nothing about scanning, so test each code with a phone (we also decoded every page with OpenCV).
 - Text is drawn with no anti-aliasing (the panel has no greys); the name is sized to fit.
 
 ## Memory: how many screens fit

@@ -6,3 +6,4 @@ __pycache__/
 *.o.bin
 .DS_Store
 frame.bin
+nametag-out/
