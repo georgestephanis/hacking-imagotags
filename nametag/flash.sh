@@ -12,4 +12,4 @@ HERE="$(cd "$(dirname "$0")" && pwd)"
 COMMON=(--pack "$PACK" -t efr32fg22c121f512gm40 -f 1000000 -O adi.v5.max_invalid_ap_count=0)
 "$PYOCD" flash "${COMMON[@]}" --base-address 0x0 "$HERE/nametag.bin"
 "$PYOCD" flash "${COMMON[@]}" --base-address 0x2000 "$PAGES"
-"$PYOCD" commander "${COMMON[@]}" -c "read32 0x2000 2" -c "reset" -c "status"     # header: 0x31534750 (PGS1) and the page count
+"$PYOCD" commander "${COMMON[@]}" -c "read32 0x2000 8" -c "reset" -c "status"     # header: 0x31534750 (PGS1) and the page count
