@@ -1,7 +1,7 @@
 # nametag: a standalone name badge on the ContRD010A tag
 
-Turns a tag into a wearable name badge that runs from a 3.3 V supply with no host: **page 1** shows a name, email and phone number; **each press of the button** (the one on the back, PB03) moves to the next page,
-and the last wraps round to the first. The other pages are **QR-code pages**: a smaller name, a red arrow pointing at the code, and a caption under the arrow (a website's domain, or "Venmo" / "Cash App" with the handle).
+Turns a tag into a wearable name badge that runs from a 3.3 V supply with no host: **page 1** shows a name, email and phone number; **a short press of the button** (the one on the back, PB03) moves to the next page,
+and the last wraps round to the first, while a **long press** (hold for about a second) jumps straight back to page 1. The other pages are **QR-code pages**: a smaller name, a red arrow pointing at the code, and a caption under the arrow (a website's domain, or "Venmo" / "Cash App" with the handle).
 Pages are defined in a config file, so adding one is a line of JSON.
 
 > Status: the page generator and the layouts are done and checked (the QR decodes). **The firmware is not written yet**; it waits for the layouts to be approved.
@@ -44,7 +44,11 @@ sections would be the way to go beyond that.) The e-paper keeps its image with n
 ## Planned firmware behaviour
 
 - Boot: draw page 1 (about 22 s); the dimmed status LED (10 %) shows work in progress.
-- Button (PB03, active-low, internal pull-up, debounced): next page, wrap at the end; presses during a refresh are ignored.
+- Button (PB03, active-low, internal pull-up, debounced about 30 ms):
+  - **short press** (released in under 1 s): next page, wrapping from the last to the first;
+  - **long press** (held for 1 s, recognised while still held, with a brief dim LED flash as acknowledgement): back to page 1 (nothing happens if page 1 is already showing);
+  - the hold time is one constant in the firmware (`LONG_PRESS_MS`, default 1000);
+  - presses **during a refresh are ignored** (a refresh takes about 22 s and the MCU is busy), and a button still held when the refresh ends is not counted; release it and press again.
 - Between presses the MCU idles; the display needs no power to hold the image. Current draw of the idle loop is not measured, and a deep-sleep (EM2/EM4) button wake is a possible follow-up.
 - Flash: firmware at `0x0` and `pages.bin` at `0x2000` with pyOCD (see [../docs/flashing.md](../docs/flashing.md)); the tag must already be unlocked.
 
