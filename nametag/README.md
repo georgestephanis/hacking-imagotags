@@ -4,8 +4,7 @@ Turns a tag into a wearable name badge that runs from a 3.3 V supply with no hos
 and the last wraps round to the first, while a **long press** (hold for about a second) jumps straight back to page 1. The other pages are **QR-code pages**: a smaller name, a red arrow pointing at the code, and a caption under the arrow (a website's domain, or "Venmo" / "Cash App" with the handle).
 Pages are defined in a config file, so adding one is a line of JSON.
 
-> Status: the page generator and the layouts are done and checked (the QR decodes). **The firmware is not written yet**; it waits for the layouts to be approved.
-> Your details live in a local config that is kept out of git (see below).
+> Status: the page generator, layouts and **firmware** are written (`nametag.c`, `nametag.bin`, 1.9 KB). Your details live in a local config that is kept out of git (see below).
 
 ## Make the pages
 
@@ -41,7 +40,7 @@ sections would be the way to go beyond that.) The e-paper keeps its image with n
 
 `pages.bin` layout: `b"PGS1"`, a little-endian `uint32` page count, 8 zero bytes, then the pages in order.
 
-## Planned firmware behaviour
+## Firmware behaviour (`nametag.c`)
 
 - Boot: draw page 1 (about 22 s); the dimmed status LED (10 %) shows work in progress.
 - Button (PB03, active-low, internal pull-up, debounced about 30 ms):
@@ -50,7 +49,9 @@ sections would be the way to go beyond that.) The e-paper keeps its image with n
   - the hold time is one constant in the firmware (`LONG_PRESS_MS`, default 1000);
   - presses **during a refresh are ignored** (a refresh takes about 22 s and the MCU is busy), and a button still held when the refresh ends is not counted; release it and press again.
 - Between presses the MCU idles; the display needs no power to hold the image. Current draw of the idle loop is not measured, and a deep-sleep (EM2/EM4) button wake is a possible follow-up.
-- Flash: firmware at `0x0` and `pages.bin` at `0x2000` with pyOCD (see [../docs/flashing.md](../docs/flashing.md)); the tag must already be unlocked.
+- Flash: `nametag/flash.sh PATH/TO/DFP.pack` puts the firmware at `0x0` and `nametag-out/pages.bin` at `0x2000` with pyOCD (wiring and unlocking: [../docs/flashing.md](../docs/flashing.md)); the tag must already be unlocked.
+- Build the firmware with `python3 scripts/build_fw.py nametag/nametag.c nametag/nametag.bin` (needs Homebrew LLVM). Without `pages.bin` flashed, the LED blinks red.
+- Powering the finished badge: 3.3 V on the centre spring (`spring-vin-3v3`) and ground on `spring-gnd`, no probe attached.
 
 ## Privacy
 
