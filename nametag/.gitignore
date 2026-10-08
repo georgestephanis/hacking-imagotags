@@ -1,0 +1,5 @@
+# personal details and generated output stay out of git
+*.local.json
+local/
+nametag-out/
+out/
