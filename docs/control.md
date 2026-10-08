@@ -79,6 +79,8 @@ The Pico must run something that can drive GPIOs: the debugprobe firmware cannot
 .venv/bin/mpremote run scripts/pico_eink.py        # ~22 s, prints "refresh took ... ms"
 ```
 
+`scripts/pico_uc81_probe.py` is an instrumented variant that prints the time of every phase and runs the tone experiments in [display.md](display.md#tone-and-half-tone-experiments).
+
 To use the Pico as an SWD probe again, put it back in BOOTSEL and flash `debugprobe_on_pico.uf2` (a running debugprobe cannot reboot itself into BOOTSEL). The same wiring works from an ESP32 or any 3.3 V MCU; port `scripts/pico_eink.py`'s command sequence.
 
 ## 4. From the FPC

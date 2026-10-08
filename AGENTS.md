@@ -30,6 +30,7 @@ Ask the human for a photo of the MCU side if you cannot tell.
 | MCU | EFR32FG22C121F512GM40, QFN40, Cortex-M33, **flash at `0x00000000`**, 512 KiB / 32 KiB RAM, ~19.1 MHz at reset. **Pin 1 = top of the left side** in `hardware/photos/mcu-side.jpg`, counter-clockwise |
 | Debug | SWD: SWCLK = PA01 (`tp-swclk-pa01`), SWDIO = PA02 (`tp-swdio-pa02`), nRESET (`tp-nreset`), SWO = PA03. Factory tags are **debug-locked**; DCI device erase (`dci.py`) + a **power cycle** unlocks them |
 | Display | Pervasive 2.06" BWR, UC81xx-like. **PC00 SDA, PC01 SCK, PC02 CS, PC03 D/C, PC04 RES, PA08 BUSY (low = busy), PC06 power (low = on)**. 248 × 128 visible; send 250 lines. Init: `0x01 03 00 2B 2B 03`, `0x06 17 17 17`, `0x04`, `0x00 CF`, `0x61 80 00 FA`, `0x50 77`, planes `0x10` (0 = black) and `0x13` (0 = red), `0x12` refresh (~21 s), `0x02` |
+| Refresh | ~22 s whatever drives the panel: the refresh is 99 % of the time and the waveform sets it. Black/white mode (`PSR 0xDF`) is 19.8 s but gives a burgundy and polarity-inverted data; setting both bits (bw 0 and red 0) is just red; partial windows are no faster. See docs/display.md |
 | LED | PD00 high = supply on; PB02 red, PB00 green, PB04 blue, all active-high. Dim by software PWM on PD00. **A pin left high stays on after release; drive it low to clear** |
 | Button | PB03, active-low, internal pull-up |
 | Springs | `spring-gnd`, `spring-vin-3v3` (centre, 3.3 V in), `spring-sig` -> PB01. Rail protocol unknown |
@@ -60,6 +61,8 @@ Detailed wiring tables are in [docs/flashing.md](docs/flashing.md) and [docs/con
 - SWD above ~20 kHz needs a solid ground; with one, 1 MHz is fine.
 - pyOCD queues writes: read back or close the session, or a final write may never be sent.
 - `scripts/eink_draw.py` halts the core; after it the tag's own firmware is not running until reset.
+- Tones: the panel has three inks and no greys; use dithering. Do not expect a faster refresh from direct control or partial windows (docs/display.md has the measurements).
+- If `mpremote` says the port is "in use by another program", look with `lsof /dev/cu.usbmodem*` (a PlatformIO serial monitor was the culprit once) and ask the human before killing anything.
 - The panel shows 248 of the 250 lines: a border at x = 249 will not appear.
 - BUSY reads 0 before reset + power-on whatever the pull; do not wait for it to go high before the first reset.
 - Holding nRESET low is what lets an external MCU drive the display lines; with the tag's firmware running they fight.

@@ -428,3 +428,15 @@ Seven test points on the right side of the coil/test-pad side go straight to the
   `mpremote cp frame.bin :frame.bin; mpremote run scripts/pico_eink.py`.
 - **Result: it works.** Refresh 21.6 s, the panel drew the "Driven by a Pico" demo frame with no help from the tag's MCU. This confirms the seven test points, the CS/DC assignment and that the panel needs nothing from the MCU.
 - To go back to SWD debugging, flash `debugprobe_on_pico-v2.3.1.uf2` (raspberrypi/debugprobe release debugprobe-v2.3.1) through BOOTSEL again.
+
+### Timing, tone and half-tone experiments (2026-10-07, evening)
+
+Pico direct drive (MicroPython, 2 MHz SPI, MCU held in reset). Full write-up with photos: [display.md](display.md#timing-where-a-refresh-spends-its-time).
+
+- Phase timings: reset 120 ms, power on 50 ms, each plane upload ~20 ms, **refresh 21.81 s (later 22.99 s)**, power off 20 ms: the refresh is 99 % of the ~22 s total. So the interface (MCU, Pico or SWD host) does not matter for speed.
+- Black/white mode (PSR `0xDF`): refresh **19.76 s**; partial window in that mode also 19.76 s (the window did not shorten the waveform; the visible region was not the one asked for).
+- KW-mode data: new bit 1 -> burgundy, 0 -> white, **independent of the old state** (three old bands, identical results); polarity inverse to the three-colour black/white plane.
+- (bw 0, red 0) = plain red: red wins; no fourth per-pixel colour.
+- Dithering: Floyd-Steinberg gradients and 9-step Bayer swatches in black/white, red/white and red/black all work well; photos in `docs/images/tones-*.jpg`.
+- Practical snags: a `pio device monitor` (PlatformIO serial monitor) left running in another terminal held the Pico's serial port and made `mpremote` fail with "failed to access ... in use by another program" (found with `lsof`, closed by the user).
+- Added: `scripts/make_tone_tests.py`, `scripts/pico_uc81_probe.py`.

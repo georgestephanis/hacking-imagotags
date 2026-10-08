@@ -16,7 +16,7 @@ Reverse engineering and re-flashing **SES-imagotag / VusionGroup "HRD3-0210-A" e
 | | |
 |---|---|
 | MCU | Silicon Labs **EFR32FG22C121F512GM40** (Cortex-M33, 512 KiB flash at `0x0`, 32 KiB RAM, 2.4 GHz radio). Ships **debug-locked**, cleared by a device erase (original firmware is lost) |
-| Panel | Pervasive Displays 2.06" family: **248 × 128, black/white/red**, UC81xx-style controller, 24-pin FPC, ~21 s full refresh |
+| Panel | Pervasive Displays 2.06" family: **248 × 128, black/white/red**, UC81xx-style controller, 24-pin FPC, ~22 s full refresh (the panel's waveform sets it, not the interface). No greys: intermediate tones are dithered, see [docs/display.md](docs/display.md) |
 | Power | three spring contacts (GND / **+3.3 V** / signal), no battery |
 | Extras | RGB LED (painfully bright at full duty), one button (PB03), a printed NFC coil with **no NFC chip fitted** |
 | Debug | SWD on test pads under the e-paper (fold the flex back): `tp-swclk-pa01`, `tp-swdio-pa02`, `tp-nreset` |
